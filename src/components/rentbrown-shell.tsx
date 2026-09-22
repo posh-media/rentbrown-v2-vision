@@ -1,6 +1,7 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { Bell, Building2, CircleUserRound, Compass, Home, Menu, WalletCards } from "lucide-react";
 import type { ReactNode } from "react";
+import { Footer } from "@/components/rentbrown-pages";
 
 const mainNav = [
   { label: "Home", to: "/dashboard", icon: Home },
@@ -56,6 +57,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
         </div>
       </header>
       <main className={isPublic ? "" : "pb-20 lg:pb-0"}>{children}</main>
+      {isPublic && <Footer />}
       {!isPublic && (
         <nav className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-5 border-t border-border bg-background px-1 pb-[max(.35rem,env(safe-area-inset-bottom))] pt-2 lg:hidden">
           {mainNav.map(({ label, to, icon: Icon }) => <Link key={to} to={to} activeProps={{ className: "text-primary" }} inactiveProps={{ className: "text-muted-foreground" }} className="flex min-w-0 flex-col items-center gap-1 text-[10px] font-bold"><Icon className="size-5"/><span className="truncate">{label}</span></Link>)}
