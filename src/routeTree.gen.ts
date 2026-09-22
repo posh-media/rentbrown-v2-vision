@@ -10,33 +10,362 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AccountRouteImport } from './routes/account'
+import { Route as CheckoutRouteImport } from './routes/checkout'
+import { Route as CompanyRouteImport } from './routes/company'
+import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as ExploreRouteImport } from './routes/explore'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as HelpRouteImport } from './routes/help'
+import { Route as HowItWorksRouteImport } from './routes/how-it-works'
+import { Route as KycRouteImport } from './routes/kyc'
+import { Route as LegalRouteImport } from './routes/legal'
+import { Route as NotificationsRouteImport } from './routes/notifications'
+import { Route as PaymentRouteImport } from './routes/payment'
+import { Route as PropertyProofRouteImport } from './routes/property-proof'
+import { Route as SecurityRouteImport } from './routes/security'
+import { Route as SettingsRouteImport } from './routes/settings'
+import { Route as OpportunitiesSlugRouteImport } from './routes/opportunities.$slug'
+import { Route as PortfolioIndexRouteImport } from './routes/portfolio.index'
+import { Route as PortfolioActiveRouteImport } from './routes/portfolio.active'
+import { Route as PortfolioMaturedRouteImport } from './routes/portfolio.matured'
+import { Route as ReferralsIndexRouteImport } from './routes/referrals.index'
+import { Route as ReferralsHistoryRouteImport } from './routes/referrals.history'
+import { Route as WalletIndexRouteImport } from './routes/wallet.index'
+import { Route as WalletDepositRouteImport } from './routes/wallet.deposit'
+import { Route as WalletTransactionsRouteImport } from './routes/wallet.transactions'
+import { Route as WalletWithdrawRouteImport } from './routes/wallet.withdraw'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AccountRoute = AccountRouteImport.update({
+  id: '/account',
+  path: '/account',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CheckoutRoute = CheckoutRouteImport.update({
+  id: '/checkout',
+  path: '/checkout',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CompanyRoute = CompanyRouteImport.update({
+  id: '/company',
+  path: '/company',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardRoute = DashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExploreRoute = ExploreRouteImport.update({
+  id: '/explore',
+  path: '/explore',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HelpRoute = HelpRouteImport.update({
+  id: '/help',
+  path: '/help',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HowItWorksRoute = HowItWorksRouteImport.update({
+  id: '/how-it-works',
+  path: '/how-it-works',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KycRoute = KycRouteImport.update({
+  id: '/kyc',
+  path: '/kyc',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LegalRoute = LegalRouteImport.update({
+  id: '/legal',
+  path: '/legal',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NotificationsRoute = NotificationsRouteImport.update({
+  id: '/notifications',
+  path: '/notifications',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PaymentRoute = PaymentRouteImport.update({
+  id: '/payment',
+  path: '/payment',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PropertyProofRoute = PropertyProofRouteImport.update({
+  id: '/property-proof',
+  path: '/property-proof',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SecurityRoute = SecurityRouteImport.update({
+  id: '/security',
+  path: '/security',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SettingsRoute = SettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OpportunitiesSlugRoute = OpportunitiesSlugRouteImport.update({
+  id: '/opportunities/$slug',
+  path: '/opportunities/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortfolioIndexRoute = PortfolioIndexRouteImport.update({
+  id: '/portfolio/',
+  path: '/portfolio/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortfolioActiveRoute = PortfolioActiveRouteImport.update({
+  id: '/portfolio/active',
+  path: '/portfolio/active',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortfolioMaturedRoute = PortfolioMaturedRouteImport.update({
+  id: '/portfolio/matured',
+  path: '/portfolio/matured',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReferralsIndexRoute = ReferralsIndexRouteImport.update({
+  id: '/referrals/',
+  path: '/referrals/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReferralsHistoryRoute = ReferralsHistoryRouteImport.update({
+  id: '/referrals/history',
+  path: '/referrals/history',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WalletIndexRoute = WalletIndexRouteImport.update({
+  id: '/wallet/',
+  path: '/wallet/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WalletDepositRoute = WalletDepositRouteImport.update({
+  id: '/wallet/deposit',
+  path: '/wallet/deposit',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WalletTransactionsRoute = WalletTransactionsRouteImport.update({
+  id: '/wallet/transactions',
+  path: '/wallet/transactions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const WalletWithdrawRoute = WalletWithdrawRouteImport.update({
+  id: '/wallet/withdraw',
+  path: '/wallet/withdraw',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/account': typeof AccountRoute
+  '/checkout': typeof CheckoutRoute
+  '/company': typeof CompanyRoute
+  '/dashboard': typeof DashboardRoute
+  '/explore': typeof ExploreRoute
+  '/faq': typeof FaqRoute
+  '/help': typeof HelpRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/kyc': typeof KycRoute
+  '/legal': typeof LegalRoute
+  '/notifications': typeof NotificationsRoute
+  '/payment': typeof PaymentRoute
+  '/property-proof': typeof PropertyProofRoute
+  '/security': typeof SecurityRoute
+  '/settings': typeof SettingsRoute
+  '/opportunities/$slug': typeof OpportunitiesSlugRoute
+  '/portfolio/active': typeof PortfolioActiveRoute
+  '/portfolio/matured': typeof PortfolioMaturedRoute
+  '/referrals/history': typeof ReferralsHistoryRoute
+  '/wallet/deposit': typeof WalletDepositRoute
+  '/wallet/transactions': typeof WalletTransactionsRoute
+  '/wallet/withdraw': typeof WalletWithdrawRoute
+  '/portfolio/': typeof PortfolioIndexRoute
+  '/referrals/': typeof ReferralsIndexRoute
+  '/wallet/': typeof WalletIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/account': typeof AccountRoute
+  '/checkout': typeof CheckoutRoute
+  '/company': typeof CompanyRoute
+  '/dashboard': typeof DashboardRoute
+  '/explore': typeof ExploreRoute
+  '/faq': typeof FaqRoute
+  '/help': typeof HelpRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/kyc': typeof KycRoute
+  '/legal': typeof LegalRoute
+  '/notifications': typeof NotificationsRoute
+  '/payment': typeof PaymentRoute
+  '/property-proof': typeof PropertyProofRoute
+  '/security': typeof SecurityRoute
+  '/settings': typeof SettingsRoute
+  '/opportunities/$slug': typeof OpportunitiesSlugRoute
+  '/portfolio/active': typeof PortfolioActiveRoute
+  '/portfolio/matured': typeof PortfolioMaturedRoute
+  '/referrals/history': typeof ReferralsHistoryRoute
+  '/wallet/deposit': typeof WalletDepositRoute
+  '/wallet/transactions': typeof WalletTransactionsRoute
+  '/wallet/withdraw': typeof WalletWithdrawRoute
+  '/portfolio': typeof PortfolioIndexRoute
+  '/referrals': typeof ReferralsIndexRoute
+  '/wallet': typeof WalletIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/account': typeof AccountRoute
+  '/checkout': typeof CheckoutRoute
+  '/company': typeof CompanyRoute
+  '/dashboard': typeof DashboardRoute
+  '/explore': typeof ExploreRoute
+  '/faq': typeof FaqRoute
+  '/help': typeof HelpRoute
+  '/how-it-works': typeof HowItWorksRoute
+  '/kyc': typeof KycRoute
+  '/legal': typeof LegalRoute
+  '/notifications': typeof NotificationsRoute
+  '/payment': typeof PaymentRoute
+  '/property-proof': typeof PropertyProofRoute
+  '/security': typeof SecurityRoute
+  '/settings': typeof SettingsRoute
+  '/opportunities/$slug': typeof OpportunitiesSlugRoute
+  '/portfolio/active': typeof PortfolioActiveRoute
+  '/portfolio/matured': typeof PortfolioMaturedRoute
+  '/referrals/history': typeof ReferralsHistoryRoute
+  '/wallet/deposit': typeof WalletDepositRoute
+  '/wallet/transactions': typeof WalletTransactionsRoute
+  '/wallet/withdraw': typeof WalletWithdrawRoute
+  '/portfolio/': typeof PortfolioIndexRoute
+  '/referrals/': typeof ReferralsIndexRoute
+  '/wallet/': typeof WalletIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/account'
+    | '/checkout'
+    | '/company'
+    | '/dashboard'
+    | '/explore'
+    | '/faq'
+    | '/help'
+    | '/how-it-works'
+    | '/kyc'
+    | '/legal'
+    | '/notifications'
+    | '/payment'
+    | '/property-proof'
+    | '/security'
+    | '/settings'
+    | '/opportunities/$slug'
+    | '/portfolio/active'
+    | '/portfolio/matured'
+    | '/referrals/history'
+    | '/wallet/deposit'
+    | '/wallet/transactions'
+    | '/wallet/withdraw'
+    | '/portfolio/'
+    | '/referrals/'
+    | '/wallet/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/account'
+    | '/checkout'
+    | '/company'
+    | '/dashboard'
+    | '/explore'
+    | '/faq'
+    | '/help'
+    | '/how-it-works'
+    | '/kyc'
+    | '/legal'
+    | '/notifications'
+    | '/payment'
+    | '/property-proof'
+    | '/security'
+    | '/settings'
+    | '/opportunities/$slug'
+    | '/portfolio/active'
+    | '/portfolio/matured'
+    | '/referrals/history'
+    | '/wallet/deposit'
+    | '/wallet/transactions'
+    | '/wallet/withdraw'
+    | '/portfolio'
+    | '/referrals'
+    | '/wallet'
+  id:
+    | '__root__'
+    | '/'
+    | '/account'
+    | '/checkout'
+    | '/company'
+    | '/dashboard'
+    | '/explore'
+    | '/faq'
+    | '/help'
+    | '/how-it-works'
+    | '/kyc'
+    | '/legal'
+    | '/notifications'
+    | '/payment'
+    | '/property-proof'
+    | '/security'
+    | '/settings'
+    | '/opportunities/$slug'
+    | '/portfolio/active'
+    | '/portfolio/matured'
+    | '/referrals/history'
+    | '/wallet/deposit'
+    | '/wallet/transactions'
+    | '/wallet/withdraw'
+    | '/portfolio/'
+    | '/referrals/'
+    | '/wallet/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AccountRoute: typeof AccountRoute
+  CheckoutRoute: typeof CheckoutRoute
+  CompanyRoute: typeof CompanyRoute
+  DashboardRoute: typeof DashboardRoute
+  ExploreRoute: typeof ExploreRoute
+  FaqRoute: typeof FaqRoute
+  HelpRoute: typeof HelpRoute
+  HowItWorksRoute: typeof HowItWorksRoute
+  KycRoute: typeof KycRoute
+  LegalRoute: typeof LegalRoute
+  NotificationsRoute: typeof NotificationsRoute
+  PaymentRoute: typeof PaymentRoute
+  PropertyProofRoute: typeof PropertyProofRoute
+  SecurityRoute: typeof SecurityRoute
+  SettingsRoute: typeof SettingsRoute
+  OpportunitiesSlugRoute: typeof OpportunitiesSlugRoute
+  PortfolioActiveRoute: typeof PortfolioActiveRoute
+  PortfolioMaturedRoute: typeof PortfolioMaturedRoute
+  ReferralsHistoryRoute: typeof ReferralsHistoryRoute
+  WalletDepositRoute: typeof WalletDepositRoute
+  WalletTransactionsRoute: typeof WalletTransactionsRoute
+  WalletWithdrawRoute: typeof WalletWithdrawRoute
+  PortfolioIndexRoute: typeof PortfolioIndexRoute
+  ReferralsIndexRoute: typeof ReferralsIndexRoute
+  WalletIndexRoute: typeof WalletIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +377,211 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/account': {
+      id: '/account'
+      path: '/account'
+      fullPath: '/account'
+      preLoaderRoute: typeof AccountRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/checkout': {
+      id: '/checkout'
+      path: '/checkout'
+      fullPath: '/checkout'
+      preLoaderRoute: typeof CheckoutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/company': {
+      id: '/company'
+      path: '/company'
+      fullPath: '/company'
+      preLoaderRoute: typeof CompanyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard': {
+      id: '/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof DashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/explore': {
+      id: '/explore'
+      path: '/explore'
+      fullPath: '/explore'
+      preLoaderRoute: typeof ExploreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/help': {
+      id: '/help'
+      path: '/help'
+      fullPath: '/help'
+      preLoaderRoute: typeof HelpRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/how-it-works': {
+      id: '/how-it-works'
+      path: '/how-it-works'
+      fullPath: '/how-it-works'
+      preLoaderRoute: typeof HowItWorksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kyc': {
+      id: '/kyc'
+      path: '/kyc'
+      fullPath: '/kyc'
+      preLoaderRoute: typeof KycRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/legal': {
+      id: '/legal'
+      path: '/legal'
+      fullPath: '/legal'
+      preLoaderRoute: typeof LegalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/notifications': {
+      id: '/notifications'
+      path: '/notifications'
+      fullPath: '/notifications'
+      preLoaderRoute: typeof NotificationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/payment': {
+      id: '/payment'
+      path: '/payment'
+      fullPath: '/payment'
+      preLoaderRoute: typeof PaymentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/property-proof': {
+      id: '/property-proof'
+      path: '/property-proof'
+      fullPath: '/property-proof'
+      preLoaderRoute: typeof PropertyProofRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/security': {
+      id: '/security'
+      path: '/security'
+      fullPath: '/security'
+      preLoaderRoute: typeof SecurityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/settings': {
+      id: '/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof SettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/opportunities/$slug': {
+      id: '/opportunities/$slug'
+      path: '/opportunities/$slug'
+      fullPath: '/opportunities/$slug'
+      preLoaderRoute: typeof OpportunitiesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portfolio/': {
+      id: '/portfolio/'
+      path: '/portfolio'
+      fullPath: '/portfolio/'
+      preLoaderRoute: typeof PortfolioIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portfolio/active': {
+      id: '/portfolio/active'
+      path: '/portfolio/active'
+      fullPath: '/portfolio/active'
+      preLoaderRoute: typeof PortfolioActiveRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portfolio/matured': {
+      id: '/portfolio/matured'
+      path: '/portfolio/matured'
+      fullPath: '/portfolio/matured'
+      preLoaderRoute: typeof PortfolioMaturedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/referrals/': {
+      id: '/referrals/'
+      path: '/referrals'
+      fullPath: '/referrals/'
+      preLoaderRoute: typeof ReferralsIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/referrals/history': {
+      id: '/referrals/history'
+      path: '/referrals/history'
+      fullPath: '/referrals/history'
+      preLoaderRoute: typeof ReferralsHistoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/wallet/': {
+      id: '/wallet/'
+      path: '/wallet'
+      fullPath: '/wallet/'
+      preLoaderRoute: typeof WalletIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/wallet/deposit': {
+      id: '/wallet/deposit'
+      path: '/wallet/deposit'
+      fullPath: '/wallet/deposit'
+      preLoaderRoute: typeof WalletDepositRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/wallet/transactions': {
+      id: '/wallet/transactions'
+      path: '/wallet/transactions'
+      fullPath: '/wallet/transactions'
+      preLoaderRoute: typeof WalletTransactionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/wallet/withdraw': {
+      id: '/wallet/withdraw'
+      path: '/wallet/withdraw'
+      fullPath: '/wallet/withdraw'
+      preLoaderRoute: typeof WalletWithdrawRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AccountRoute: AccountRoute,
+  CheckoutRoute: CheckoutRoute,
+  CompanyRoute: CompanyRoute,
+  DashboardRoute: DashboardRoute,
+  ExploreRoute: ExploreRoute,
+  FaqRoute: FaqRoute,
+  HelpRoute: HelpRoute,
+  HowItWorksRoute: HowItWorksRoute,
+  KycRoute: KycRoute,
+  LegalRoute: LegalRoute,
+  NotificationsRoute: NotificationsRoute,
+  PaymentRoute: PaymentRoute,
+  PropertyProofRoute: PropertyProofRoute,
+  SecurityRoute: SecurityRoute,
+  SettingsRoute: SettingsRoute,
+  OpportunitiesSlugRoute: OpportunitiesSlugRoute,
+  PortfolioActiveRoute: PortfolioActiveRoute,
+  PortfolioMaturedRoute: PortfolioMaturedRoute,
+  ReferralsHistoryRoute: ReferralsHistoryRoute,
+  WalletDepositRoute: WalletDepositRoute,
+  WalletTransactionsRoute: WalletTransactionsRoute,
+  WalletWithdrawRoute: WalletWithdrawRoute,
+  PortfolioIndexRoute: PortfolioIndexRoute,
+  ReferralsIndexRoute: ReferralsIndexRoute,
+  WalletIndexRoute: WalletIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
