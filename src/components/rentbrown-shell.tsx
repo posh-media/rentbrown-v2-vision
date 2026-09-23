@@ -32,6 +32,10 @@ export function Brand() {
 export function SiteShell({ children }: { children: ReactNode }) {
   const pathname = useRouterState({ select: (state) => state.location.pathname });
   const isPublic = ["/", "/how-it-works", "/property-proof", "/company", "/faq", "/legal"].includes(pathname);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => setMenuOpen(false), [pathname]);
+
 
   return (
     <div className="min-h-screen bg-background">
