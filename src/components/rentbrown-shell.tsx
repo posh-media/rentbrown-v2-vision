@@ -1,7 +1,16 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import { Bell, Building2, CircleUserRound, Compass, Home, Menu, WalletCards } from "lucide-react";
-import type { ReactNode } from "react";
+import { Bell, Building2, CircleUserRound, Compass, Home, Menu, WalletCards, X } from "lucide-react";
+import { useEffect, useState, type ReactNode } from "react";
 import { Footer } from "@/components/rentbrown-pages";
+
+const moreNav = [
+  { label: "Notifications", to: "/notifications" },
+  { label: "Referrals", to: "/referrals" },
+  { label: "Identity verification", to: "/kyc" },
+  { label: "Security", to: "/security" },
+  { label: "Settings", to: "/settings" },
+  { label: "Help & tutorials", to: "/help" },
+] as const;
 
 const mainNav = [
   { label: "Home", to: "/dashboard", icon: Home },
