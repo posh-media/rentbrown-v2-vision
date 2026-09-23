@@ -1,7 +1,16 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import { Bell, Building2, CircleUserRound, Compass, Home, Menu, WalletCards } from "lucide-react";
-import type { ReactNode } from "react";
+import { Bell, Building2, CircleUserRound, Compass, Home, Menu, WalletCards, X } from "lucide-react";
+import { useEffect, useState, type ReactNode } from "react";
 import { Footer } from "@/components/rentbrown-pages";
+
+const moreNav = [
+  { label: "Notifications", to: "/notifications" },
+  { label: "Referrals", to: "/referrals" },
+  { label: "Identity verification", to: "/kyc" },
+  { label: "Security", to: "/security" },
+  { label: "Settings", to: "/settings" },
+  { label: "Help & tutorials", to: "/help" },
+] as const;
 
 const mainNav = [
   { label: "Home", to: "/dashboard", icon: Home },
@@ -23,6 +32,10 @@ export function Brand() {
 export function SiteShell({ children }: { children: ReactNode }) {
   const pathname = useRouterState({ select: (state) => state.location.pathname });
   const isPublic = ["/", "/how-it-works", "/property-proof", "/company", "/faq", "/legal"].includes(pathname);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => setMenuOpen(false), [pathname]);
+
 
   return (
     <div className="min-h-screen bg-background">
@@ -50,11 +63,21 @@ export function SiteShell({ children }: { children: ReactNode }) {
               <div className="flex items-center justify-end gap-2">
                 <Link to="/notifications" aria-label="Notifications" className="relative grid size-10 place-items-center rounded-md border border-border bg-card text-foreground"><Bell className="size-4"/><span className="absolute right-2 top-2 size-1.5 rounded-full bg-destructive" /></Link>
                 <Link to="/account" className="hidden items-center gap-2 rounded-md bg-muted px-3 py-2 text-sm font-bold sm:flex"><span className="grid size-6 place-items-center rounded-full bg-primary text-[10px] text-primary-foreground">AO</span>Ada</Link>
-                <button aria-label="Open menu" className="grid size-10 place-items-center rounded-md border border-border lg:hidden"><Menu className="size-4"/></button>
+                <button onClick={() => setMenuOpen((v) => !v)} aria-label={menuOpen ? "Close menu" : "Open menu"} aria-expanded={menuOpen} className="grid size-10 place-items-center rounded-md border border-border lg:hidden">{menuOpen ? <X className="size-4"/> : <Menu className="size-4"/>}</button>
               </div>
             </>
           )}
         </div>
+        {!isPublic && menuOpen && (
+          <div className="border-t border-border bg-card lg:hidden">
+            <div className="rb-container grid gap-1 py-3">
+              <Link to="/account" className="rounded-md px-3 py-2.5 text-sm font-bold text-foreground">Account & profile</Link>
+              {moreNav.map(({ label, to }) => (
+                <Link key={to} to={to} activeProps={{ className: "text-primary" }} inactiveProps={{ className: "text-muted-foreground" }} className="rounded-md px-3 py-2.5 text-sm font-semibold">{label}</Link>
+              ))}
+            </div>
+          </div>
+        )}
       </header>
       <main className={isPublic ? "" : "pb-20 lg:pb-0"}>{children}</main>
       {isPublic && <Footer />}
